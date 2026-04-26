@@ -255,6 +255,12 @@ p { font-size: 17px; color: var(--gray); line-height: 1.75; }
   overflow: hidden;
   background: var(--surface);
 }
+.hero {
+  background-image: 
+    url("data:image/svg+xml,..."), /* hex — paste the url() above */
+    url("your-existing-grid.svg"); /* your current grid pattern second */
+  background-repeat: repeat, repeat;
+}
 .hero-bg {
   position: absolute;
   inset: 0;
