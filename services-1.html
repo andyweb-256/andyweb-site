@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ============================================================
+       ANDYWEB - Services & Pricing Page
+       Edit package names, features, and prices in script.js PRICING object
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services & Pricing – ANDYWEB</title>
+  <meta name="description" content="Affordable website packages for Uganda and international clients. Starter, Business, and Online Store websites." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>" />
+</head>
+<body>
+
+<!-- Location Banner -->
+<div id="location-banner" class="location-banner hidden"></div>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">ANDY<span>WEB</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="dashboard.html">Dashboard</a>
+    </div>
+    <a href="dashboard.html" class="btn btn-primary nav-cta">Start a Project</a>
+    <button class="nav-hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="contact.html">Contact</a>
+  <a href="dashboard.html">Dashboard</a>
+</div>
+
+<!-- ============================================================
+     PAGE HERO
+     ============================================================ -->
+<section class="page-hero">
+  <div class="container">
+    <div class="tag">Transparent Pricing</div>
+    <!-- Edit services page headline here -->
+    <h1>Simple, Affordable Pricing</h1>
+    <p>No hidden fees. No confusing packages. Just honest pricing for professional websites.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     CURRENCY TOGGLE TABS
+     ============================================================ -->
+<section class="section-sm" style="background:var(--white); padding-bottom:0;">
+  <div class="container text-center">
+    <!-- Currency tabs — manually switch if auto-detection fails -->
+    <div class="tabs">
+      <button class="tab currency-tab active" data-currency="USD">🌍 USD (International)</button>
+      <button class="tab currency-tab" data-currency="UGX">🇺🇬 UGX (Uganda)</button>
+    </div>
+    <p style="font-size:14px; color:var(--gray); margin-top:-16px;">Prices auto-detected based on your location. Click to switch manually.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     PRICING PACKAGES
+     ============================================================ -->
+<section class="section" style="background:var(--white);">
+  <div class="container">
+    <div class="section-title-block center reveal">
+      <div class="tag">Website Packages</div>
+      <!-- Edit section heading here -->
+      <h2 class="section-title">Choose your website package</h2>
+      <p class="section-desc">All packages include a mobile-responsive design, contact form, and delivery within 7 business days.</p>
+    </div>
+
+    <div class="pricing-grid">
+
+      <!-- ---- Starter Package ---- -->
+      <div class="pricing-card reveal reveal-delay-1">
+        <div class="pricing-name">Starter</div>
+        <!-- Prices are set by script.js based on location -->
+        <div class="pricing-amount pricing-starter-amount">$80</div>
+        <div class="pricing-range pricing-starter-range">Up to $120</div>
+        <div class="pricing-divider"></div>
+        <!-- Edit starter features here -->
+        <div class="pricing-features">
+          <div class="pricing-feature"><span class="pf-icon">✓</span> Up to 5 pages</div>
+          <div class="pricing-feature"><span class="pf-icon">✓</span> Mobile-responsive design</div>
+          <div class="pricing-feature"><span class="pf-icon">✓</span> Contact form</div>
+          <div class="pricing-feature"><span class="pf-icon">✓</span> Basic SEO setup</div>
+          <div class="pricing-feature"><span class="pf-icon">✓</span> Social media links</div>
+          <div class="pricing-feature"><span class="pf-icon">✓</span> WhatsApp button</div>
+          <div class="pricing-feature" style="color:var(--light-gray)"><span class="pf-icon" style="color:var(--light-gray)">✗</span> Gallery/portfolio</div>
+          <div class="pricing-feature" style="color:var(--light-gray)"><span class="pf-icon" style="color:var(--light-gray)">✗</span> Blog section</div>
+          <div class="pricing-feature" style="color:var(--light-gray)"><span class="pf-icon" style="color:var(--light-gray)">✗</span> E-commerce</div>
+        </div>
+        <a href="dashboard.html" class="btn btn-outline" style="width:100%; justify-content:center;">Get Starter</a>
+      </div>
+
+      <!-- ---- Business Package (featured) ---- -->
+      <div class="pricing-card popular reveal reveal-delay-2">
+        <span class="popular-badge">Most Popular</span>
+        <div class="pricing-name">Business</div>
+        <div class="pricing-amount pricing-business-amount">$150</div>
+        <div class="pricing-range pricing-business-range">Up to $250</div>
+        <div class="pricing-divider"></div>
+        <!-- Edit business features here -->
+        <div class="pricing-features">
+          <div class="pricing-feature"><span class="pf-icon">✓</span> Up to 10 pages</div>
+          <div class="pricing-feature"><span class="pf-icon">✓</span> Custom design & branding</div>
+          <div class="pricing-feature"><span class="pf-icon">✓</span> Contact form</div>
+          <div class="pricing-feature"><span class="pf-icon">✓</span> Full SEO optimization</div>
+          <div class="pricing-feature"><span class="pf-icon">✓</span> Social media links</div>
+          <div class="pricing-feature"><span class="pf-icon">✓</span> WhatsApp integration</div>
+          <div class="pricing-feature"><span class="pf-icon">✓</span> Gallery/portfolio</div>
+          <div class="pricing-feature"><span class="pf-icon">✓</span> Blog section</div>
+          <div class="pricing-feature"><span class="pf-icon">✓</span> Google Maps embed</div>
+        </div>
+        <a href="dashboard.html" class="btn btn-primary" style="width:100%; justify-content:center;">Get Business</a>
+      </div>
+
+      <!-- ---- Online Store Package ---- -->
+      <div class="pricing-card reveal reveal-delay-3">
+        <div class="pricing-name">Online Store</div>
+        <div class="pricing-amount pricing-store-amount">$300</div>
+        <div class="pricing-range pricing-store-range">Up to $500</div>
+        <div class="pricing-divider"></div>
+        <!-- Edit store features here -->
+        <div class="pricing-features">
+          <div class="pricing-feature"><span class="pf-icon">✓</span> Unlimited pages</div>
+          <div class="pricing-feature"><span class="pf-icon">✓</span> Custom e-commerce design</div>
+          <div class="pricing-feature"><span class="pf-icon">✓</span> Product listings</div>
+          <div class="pricing-feature"><span class="pf-icon">✓</span> Shopping cart</div>
+          <div class="pricing-feature"><span class="pf-icon">✓</span> Mobile checkout</div>
+          <div class="pricing-feature"><span class="pf-icon">✓</span> Payment integration</div>
+          <div class="pricing-feature"><span class="pf-icon">✓</span> Order management</div>
+          <div class="pricing-feature"><span class="pf-icon">✓</span> Inventory system</div>
+          <div class="pricing-feature"><span class="pf-icon">✓</span> Full SEO & analytics</div>
+        </div>
+        <a href="dashboard.html" class="btn btn-outline" style="width:100%; justify-content:center;">Get Store</a>
+      </div>
+
+    </div>
+
+    <!-- ---- Pricing note ---- -->
+    <div style="text-align:center; margin-top:40px;" class="reveal">
+      <p style="font-size:14px; color:var(--gray);">All prices are one-time project fees. Hosting is a separate optional add-on. <a href="contact.html" style="color:var(--accent); font-weight:600;">Contact us</a> if you need a custom quote.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     HOSTING OPTIONS
+     ============================================================ -->
+<section class="section" style="background:var(--surface);">
+  <div class="container">
+    <div class="section-title-block center reveal">
+      <div class="tag">Hosting Options</div>
+      <!-- Edit hosting section headline here -->
+      <h2 class="section-title">Where will your website live?</h2>
+      <p class="section-desc">We offer two hosting options depending on your needs and budget.</p>
+    </div>
+
+    <div class="hosting-cards">
+
+      <!-- Free Hosting Card -->
+      <div class="hosting-card reveal reveal-delay-1">
+        <div class="hosting-icon">🆓</div>
+        <h3>Free Hosting</h3>
+        <p>Get your website online at zero cost using free platforms like InfinityFree or GitHub Pages.</p>
+        <div class="hosting-price price-host-free">Free</div>
+        <div class="hosting-feats">
+          <!-- Edit free hosting features here -->
+          <div class="hosting-feat"><div class="dot"></div><span>Hosted on InfinityFree or GitHub Pages</span></div>
+          <div class="hosting-feat"><div class="dot"></div><span>Free subdomain included (e.g. yourbusiness.infinityfreeapp.com)</span></div>
+          <div class="hosting-feat"><div class="dot"></div><span>Good for getting started online quickly</span></div>
+          <div class="hosting-feat"><div class="dot"></div><span>⚠ Limited performance on high traffic</span></div>
+          <div class="hosting-feat"><div class="dot"></div><span>⚠ No custom domain (e.g. yourbusiness.com)</span></div>
+          <div class="hosting-feat"><div class="dot"></div><span>⚠ No professional email address</span></div>
+        </div>
+        <br>
+        <a href="dashboard.html" class="btn btn-outline" style="width:100%; justify-content:center;">Choose Free Hosting</a>
+      </div>
+
+      <!-- Paid Hosting Card (Recommended) -->
+      <div class="hosting-card recommended reveal reveal-delay-2">
+        <div class="hosting-badge">Recommended</div>
+        <div class="hosting-icon">⭐</div>
+        <h3>Paid Hosting</h3>
+        <p>A fully professional setup with your own domain name, better performance, and reliable uptime.</p>
+        <div class="hosting-price price-host-paid">$30 – $60 / year</div>
+        <div class="hosting-feats">
+          <!-- Edit paid hosting features here -->
+          <div class="hosting-feat"><div class="dot"></div><span>Custom domain name (e.g. yourbusiness.com)</span></div>
+          <div class="hosting-feat"><div class="dot"></div><span>Faster page loading speeds</span></div>
+          <div class="hosting-feat"><div class="dot"></div><span>Better uptime & reliability</span></div>
+          <div class="hosting-feat"><div class="dot"></div><span>Professional email address (e.g. you@yourbusiness.com)</span></div>
+          <div class="hosting-feat"><div class="dot"></div><span>SSL certificate (https://) included</span></div>
+          <div class="hosting-feat"><div class="dot"></div><span>Priority support from ANDYWEB</span></div>
+        </div>
+        <br>
+        <a href="dashboard.html" class="btn btn-primary" style="width:100%; justify-content:center;">Choose Paid Hosting</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     COMPARISON TABLE
+     ============================================================ -->
+<section class="section" style="background:var(--white);">
+  <div class="container">
+    <div class="section-title-block center reveal">
+      <div class="tag">Quick Comparison</div>
+      <h2 class="section-title">Free vs Paid Hosting</h2>
+    </div>
+    <div style="overflow-x:auto;" class="reveal">
+      <table style="width:100%; border-collapse:collapse; font-family:var(--font-body);">
+        <thead>
+          <tr style="background:var(--primary); color:var(--white);">
+            <th style="padding:16px 20px; text-align:left; font-family:var(--font-display); font-size:14px;">Feature</th>
+            <th style="padding:16px 20px; text-align:center; font-family:var(--font-display); font-size:14px;">Free Hosting</th>
+            <th style="padding:16px 20px; text-align:center; font-family:var(--font-display); font-size:14px; color:var(--accent2);">Paid Hosting ⭐</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Edit table rows here -->
+          <tr style="border-bottom:1px solid var(--light-gray);">
+            <td style="padding:14px 20px; font-size:14px;">Custom domain (yourbusiness.com)</td>
+            <td style="padding:14px 20px; text-align:center; color:#EF4444; font-weight:700;">✗</td>
+            <td style="padding:14px 20px; text-align:center; color:var(--accent); font-weight:700;">✓</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--light-gray); background:var(--surface);">
+            <td style="padding:14px 20px; font-size:14px;">Professional email address</td>
+            <td style="padding:14px 20px; text-align:center; color:#EF4444; font-weight:700;">✗</td>
+            <td style="padding:14px 20px; text-align:center; color:var(--accent); font-weight:700;">✓</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--light-gray);">
+            <td style="padding:14px 20px; font-size:14px;">SSL Certificate (https)</td>
+            <td style="padding:14px 20px; text-align:center; color:var(--gray);">Partial</td>
+            <td style="padding:14px 20px; text-align:center; color:var(--accent); font-weight:700;">✓</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--light-gray); background:var(--surface);">
+            <td style="padding:14px 20px; font-size:14px;">Page loading speed</td>
+            <td style="padding:14px 20px; text-align:center; color:var(--gray);">Moderate</td>
+            <td style="padding:14px 20px; text-align:center; color:var(--accent); font-weight:700;">Fast</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--light-gray);">
+            <td style="padding:14px 20px; font-size:14px;">Annual cost</td>
+            <td style="padding:14px 20px; text-align:center; font-weight:700; color:var(--accent);">Free</td>
+            <td style="padding:14px 20px; text-align:center; font-weight:700; color:var(--accent);" class="price-host-paid">$30–$60/yr</td>
+          </tr>
+          <tr>
+            <td style="padding:14px 20px; font-size:14px;">Best for</td>
+            <td style="padding:14px 20px; text-align:center; font-size:13px; color:var(--gray);">Getting started, testing</td>
+            <td style="padding:14px 20px; text-align:center; font-size:13px; color:var(--gray);">Established businesses</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQ SECTION
+     ============================================================ -->
+<section class="section" style="background:var(--surface);">
+  <div class="container">
+    <div class="section-title-block center reveal">
+      <div class="tag">FAQ</div>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+    </div>
+    <div style="max-width:720px; margin:0 auto;">
+      <!-- Edit FAQ items here -->
+      <div class="faq-item reveal" style="background:var(--white); border-radius:var(--radius); padding:28px; margin-bottom:16px; border:2px solid transparent; cursor:pointer; transition:var(--transition);" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='transparent'">
+        <h4 style="font-family:var(--font-display); margin-bottom:10px;">How long does it take to build my website?</h4>
+        <p style="font-size:15px;">Most websites are delivered within 5–7 business days from the time we receive all your content and details. Larger projects like online stores may take 10–14 days.</p>
+      </div>
+      <div class="faq-item reveal reveal-delay-1" style="background:var(--white); border-radius:var(--radius); padding:28px; margin-bottom:16px; border:2px solid transparent; cursor:pointer; transition:var(--transition);" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='transparent'">
+        <h4 style="font-family:var(--font-display); margin-bottom:10px;">Do I need to know anything technical?</h4>
+        <p style="font-size:15px;">Not at all! We handle everything technical. You just tell us about your business and we'll do the rest. We also explain how to make basic updates yourself after delivery.</p>
+      </div>
+      <div class="faq-item reveal reveal-delay-2" style="background:var(--white); border-radius:var(--radius); padding:28px; margin-bottom:16px; border:2px solid transparent; cursor:pointer; transition:var(--transition);" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='transparent'">
+        <h4 style="font-family:var(--font-display); margin-bottom:10px;">Can I pay in Ugandan Shillings?</h4>
+        <p style="font-size:15px;">Yes! Ugandan clients can pay via Mobile Money (MTN/Airtel), bank transfer, or any other agreed method. We'll send you a quote in UGX.</p>
+      </div>
+      <div class="faq-item reveal reveal-delay-3" style="background:var(--white); border-radius:var(--radius); padding:28px; margin-bottom:16px; border:2px solid transparent; cursor:pointer; transition:var(--transition);" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='transparent'">
+        <h4 style="font-family:var(--font-display); margin-bottom:10px;">What if I don't have a logo?</h4>
+        <p style="font-size:15px;">No problem. We can create a simple logo for you as part of the package, or design your site using your business name styled as a logo (wordmark). Just let us know when filling the form.</p>
+      </div>
+      <div class="faq-item reveal reveal-delay-4" style="background:var(--white); border-radius:var(--radius); padding:28px; margin-bottom:16px; border:2px solid transparent; cursor:pointer; transition:var(--transition);" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='transparent'">
+        <h4 style="font-family:var(--font-display); margin-bottom:10px;">Can I request changes after delivery?</h4>
+        <p style="font-size:15px;">Yes — each package includes up to 3 revision rounds. After that, additional changes are billed at a small hourly rate. We make sure you're happy before finalising.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2 class="reveal">Ready to get your website?</h2>
+    <p class="reveal">Submit your project details and we'll get back to you within 24 hours.</p>
+    <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;" class="reveal">
+      <a href="dashboard.html" class="btn btn-white">Start Your Project →</a>
+      <a href="contact.html" class="btn" style="background:rgba(255,255,255,0.15); color:white; border-color:rgba(255,255,255,0.3);">Ask a Question</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">ANDY<span>WEB</span></div>
+        <p class="footer-desc">Affordable, professional websites for individuals and small businesses in Uganda and around the world.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link">📘</a>
+          <a href="#" class="social-link">📸</a>
+          <a href="#" class="social-link">🐦</a>
+          <a href="#" class="social-link">💬</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Starter Website</a></li>
+          <li><a href="services.html">Business Website</a></li>
+          <li><a href="services.html">Online Store</a></li>
+          <li><a href="services.html">Hosting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:andyweb256@gmail.com">📧 andyweb256@gmail.com</a></li>
+          <li><a href="tel:+256785721129">📞 +256 785 721 129</a></li>
+          <li><a href="https://wa.me/256785721129">💬 WhatsApp</a></li>
+          <li><a href="contact.html">Send a message</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 ANDYWEB. All rights reserved.</span>
+      <span>Made with ❤️ in Uganda 🇺🇬</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
