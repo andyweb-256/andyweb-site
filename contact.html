@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ============================================================
+       ANDYWEB - Contact Page
+       Edit contact details, WhatsApp link, and form action below
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – ANDYWEB</title>
+  <meta name="description" content="Contact ANDYWEB for affordable website services. WhatsApp, email, or send a message online." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>" />
+</head>
+<body>
+
+<div id="location-banner" class="location-banner hidden"></div>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">ANDY<span>WEB</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="dashboard.html">Dashboard</a>
+    </div>
+    <a href="dashboard.html" class="btn btn-primary nav-cta">Start a Project</a>
+    <button class="nav-hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="contact.html">Contact</a>
+  <a href="dashboard.html">Dashboard</a>
+</div>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="container">
+    <div class="tag">Get in Touch</div>
+    <!-- Edit contact page headline here -->
+    <h1>Let's talk about your website</h1>
+    <p>Have a question or ready to start? Reach out via WhatsApp, email, or the form below.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT SECTION
+     ============================================================ -->
+<section class="section">
+  <div class="container contact-grid">
+
+    <!-- Contact info side -->
+    <div class="contact-info reveal-left">
+      <div class="tag">Contact Details</div>
+      <h2 class="section-title">We'd love to hear from you</h2>
+      <p>Whether you have a question about pricing, want to discuss your project, or just want to say hello — we're here and friendly.</p>
+
+      <div class="contact-items" style="margin-top:40px;">
+        <!-- Edit contact details here -->
+        <div class="contact-item">
+          <div class="contact-item-icon">📧</div>
+          <div class="contact-item-text">
+            <strong>Email</strong>
+            <span><a href="mailto:hello@andyweb.ug" style="color:var(--accent);">hello@andyweb.ug</a></span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📞</div>
+          <div class="contact-item-text">
+            <strong>Phone</strong>
+            <!-- Edit phone number here -->
+            <span><a href="tel:+256700000000" style="color:var(--accent);">+256 700 000 000</a></span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">💬</div>
+          <div class="contact-item-text">
+            <strong>WhatsApp</strong>
+            <!-- Edit WhatsApp number here (format: 256XXXXXXXXX without +) -->
+            <span><a href="https://wa.me/256700000000?text=Hi%20ANDYWEB%2C%20I%27m%20interested%20in%20getting%20a%20website." target="_blank" style="color:var(--accent);">Chat with us on WhatsApp →</a></span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📍</div>
+          <div class="contact-item-text">
+            <strong>Location</strong>
+            <!-- Edit location here -->
+            <span>Kampala, Uganda 🇺🇬 (serving worldwide)</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">⏰</div>
+          <div class="contact-item-text">
+            <strong>Response Time</strong>
+            <!-- Edit response time here -->
+            <span>Usually within 2–4 hours (Mon–Sat)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- WhatsApp CTA button -->
+      <div style="margin-top:40px;">
+        <!-- Edit WhatsApp message text here (URL-encoded) -->
+        <a href="https://wa.me/256700000000?text=Hi%20ANDYWEB%2C%20I%27m%20interested%20in%20getting%20a%20website.%20Can%20you%20help%3F" target="_blank" class="btn btn-whatsapp">
+          💬 &nbsp; Chat on WhatsApp Now
+        </a>
+      </div>
+
+      <!-- Social links -->
+      <div style="margin-top:40px;">
+        <p style="font-family:var(--font-display); font-weight:700; font-size:13px; text-transform:uppercase; letter-spacing:0.1em; color:var(--gray); margin-bottom:16px;">Follow us</p>
+        <div style="display:flex; gap:12px;">
+          <!-- Edit social links here -->
+          <a href="#" class="social-link" style="background:var(--light-gray);" aria-label="Facebook">📘</a>
+          <a href="#" class="social-link" style="background:var(--light-gray);" aria-label="Instagram">📸</a>
+          <a href="#" class="social-link" style="background:var(--light-gray);" aria-label="Twitter">🐦</a>
+          <a href="#" class="social-link" style="background:var(--light-gray);" aria-label="LinkedIn">💼</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact form side -->
+    <div class="reveal-right">
+      <div class="contact-form-card">
+        <h3>Send us a message</h3>
+        <p>Fill in the form below and we'll get back to you as soon as possible.</p>
+
+        <!-- NOTE: To make this form actually send emails, integrate a service like
+             Formspree (formspree.io) by changing the form action to:
+             action="https://formspree.io/f/YOUR_FORM_ID" method="POST"
+             Or use Netlify Forms if hosting on Netlify. -->
+        <form id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="c-name">Your Name *</label>
+              <input type="text" id="c-name" name="name" class="form-control" placeholder="e.g. Sarah Namuganza" required />
+            </div>
+            <div class="form-group">
+              <label for="c-email">Email Address *</label>
+              <input type="email" id="c-email" name="email" class="form-control" placeholder="you@example.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="c-phone">Phone / WhatsApp</label>
+            <input type="tel" id="c-phone" name="phone" class="form-control" placeholder="+256 700 000 000" />
+          </div>
+          <div class="form-group">
+            <label for="c-subject">Subject</label>
+            <select id="c-subject" name="subject" class="form-control">
+              <option value="">Select a topic…</option>
+              <option value="Starter Website">Starter Website Enquiry</option>
+              <option value="Business Website">Business Website Enquiry</option>
+              <option value="Online Store">Online Store Enquiry</option>
+              <option value="Hosting">Hosting Question</option>
+              <option value="Pricing">Pricing Question</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="c-message">Message *</label>
+            <textarea id="c-message" name="message" class="form-control" placeholder="Tell us about your project or ask any question…" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; padding:16px;">
+            Send Message →
+          </button>
+        </form>
+
+        <div id="contact-success" class="form-success">
+          <h4>✅ Message Sent!</h4>
+          <p>Thank you for reaching out. We'll reply within 2–4 hours. You can also WhatsApp us for a faster response.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     MAP PLACEHOLDER
+     ============================================================ -->
+<section style="background:var(--light-gray); height:300px; display:flex; align-items:center; justify-content:center; text-align:center;">
+  <div>
+    <div style="font-size:48px; margin-bottom:16px;">📍</div>
+    <!-- Edit map link here -->
+    <p style="font-family:var(--font-display); font-weight:700; font-size:18px; margin-bottom:8px;">Kampala, Uganda</p>
+    <p style="font-size:14px; color:var(--gray);">Serving clients worldwide | Available online 24/7</p>
+    <!-- Optionally replace this section with a Google Maps embed iframe -->
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">ANDY<span>WEB</span></div>
+        <p class="footer-desc">Affordable, professional websites for individuals and small businesses in Uganda and around the world.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link">📘</a>
+          <a href="#" class="social-link">📸</a>
+          <a href="#" class="social-link">🐦</a>
+          <a href="#" class="social-link">💬</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Starter Website</a></li>
+          <li><a href="services.html">Business Website</a></li>
+          <li><a href="services.html">Online Store</a></li>
+          <li><a href="services.html">Hosting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@andyweb.ug">📧 hello@andyweb.ug</a></li>
+          <li><a href="tel:+256700000000">📞 +256 700 000 000</a></li>
+          <li><a href="https://wa.me/256700000000">💬 WhatsApp</a></li>
+          <li><a href="contact.html">Send a message</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 ANDYWEB. All rights reserved.</span>
+      <span>Made with ❤️ in Uganda 🇺🇬</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

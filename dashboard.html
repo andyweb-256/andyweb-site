@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ============================================================
+       ANDYWEB - Client Dashboard
+       This page saves project requests to browser localStorage.
+       To connect to a real backend, replace the form submit handler
+       in script.js with a fetch() call to your server/API.
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Client Dashboard – ANDYWEB</title>
+  <meta name="description" content="Submit your website project request to ANDYWEB. Fill in your business details and we'll get building." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>" />
+</head>
+<body>
+
+<div id="location-banner" class="location-banner hidden"></div>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">ANDY<span>WEB</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="dashboard.html">Dashboard</a>
+    </div>
+    <a href="contact.html" class="btn btn-primary nav-cta">Contact Us</a>
+    <button class="nav-hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="contact.html">Contact</a>
+  <a href="dashboard.html">Dashboard</a>
+</div>
+
+<!-- ============================================================
+     DASHBOARD HERO
+     ============================================================ -->
+<section class="dashboard-hero">
+  <div class="container">
+    <div class="tag" style="background:rgba(255,92,40,0.2); color:var(--accent2);">Client Dashboard</div>
+    <!-- Edit dashboard headline here -->
+    <h1>Start Your Website Project</h1>
+    <p>Fill in the details below and we'll get started on your website right away.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     DASHBOARD MAIN LAYOUT
+     ============================================================ -->
+<section class="section" style="background:var(--surface);">
+  <div class="container">
+    <div class="dashboard-layout">
+
+      <!-- ====================================================
+           PROJECT FORM (left/main column)
+           ==================================================== -->
+      <div class="dashboard-form-card reveal-left">
+        <form id="project-form" novalidate>
+
+          <!-- === SECTION 1: Business Info === -->
+          <div class="form-section-title">
+            <div class="step-dot">1</div> Business Information
+          </div>
+
+          <div class="form-group">
+            <label for="business-name">Business Name *</label>
+            <input type="text" id="business-name" name="businessName" class="form-control" placeholder="e.g. Nakku Beauty Salon" required />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="business-type">Business Type *</label>
+              <select id="business-type" name="businessType" class="form-control" required>
+                <option value="">Select type…</option>
+                <!-- Edit business type options here -->
+                <option value="Salon / Beauty">Salon / Beauty</option>
+                <option value="Restaurant / Food">Restaurant / Food</option>
+                <option value="Retail / Shop">Retail / Shop</option>
+                <option value="Professional Services">Professional Services</option>
+                <option value="Healthcare / Clinic">Healthcare / Clinic</option>
+                <option value="Education / Training">Education / Training</option>
+                <option value="Construction / Property">Construction / Property</option>
+                <option value="Transport / Logistics">Transport / Logistics</option>
+                <option value="NGO / Charity">NGO / Charity</option>
+                <option value="Personal / Portfolio">Personal / Portfolio</option>
+                <option value="Freelancer">Freelancer</option>
+                <option value="Church / Ministry">Church / Ministry</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="num-pages">Number of Pages Needed</label>
+              <select id="num-pages" name="numPages" class="form-control">
+                <option value="">Not sure yet</option>
+                <option value="1–3 pages">1–3 pages (Landing page)</option>
+                <option value="4–5 pages">4–5 pages (Starter)</option>
+                <option value="6–10 pages">6–10 pages (Business)</option>
+                <option value="10+ pages">10+ pages (Full site)</option>
+                <option value="Online Store">Online store</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="business-description">Brief Business Description *</label>
+            <textarea id="business-description" name="businessDescription" class="form-control" placeholder="Describe what your business does in a few sentences. E.g. 'We are a hair salon in Kampala offering braiding, weaves, and nail services.'" rows="4" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="services-offered">Services / Products Offered</label>
+            <textarea id="services-offered" name="servicesOffered" class="form-control" placeholder="List the main services or products you offer. E.g. 'Hair braiding, weaves, manicure, pedicure, eyebrow threading.'" rows="3"></textarea>
+          </div>
+
+          <!-- === SECTION 2: Design Preferences === -->
+          <div class="form-section-title">
+            <div class="step-dot">2</div> Design Preferences
+          </div>
+
+          <div class="form-group">
+            <label>Preferred Color Theme</label>
+            <p style="font-size:13px; color:var(--gray); margin-bottom:12px; margin-top:-8px;">Click a color to select it as your main brand color.</p>
+            <div class="color-picker-grid">
+              <!-- Edit color options here -->
+              <div class="color-swatch" data-color="Bold Orange" style="background:#FF5C28;" title="Bold Orange"></div>
+              <div class="color-swatch" data-color="Royal Blue" style="background:#2563EB;" title="Royal Blue"></div>
+              <div class="color-swatch" data-color="Forest Green" style="background:#16A34A;" title="Forest Green"></div>
+              <div class="color-swatch" data-color="Deep Purple" style="background:#7C3AED;" title="Deep Purple"></div>
+              <div class="color-swatch" data-color="Classic Black" style="background:#0A0A0A;" title="Classic Black"></div>
+              <div class="color-swatch" data-color="Rose Pink" style="background:#EC4899;" title="Rose Pink"></div>
+              <div class="color-swatch" data-color="Golden Yellow" style="background:#F59E0B;" title="Golden Yellow"></div>
+              <div class="color-swatch" data-color="Sky Blue" style="background:#0EA5E9;" title="Sky Blue"></div>
+              <div class="color-swatch" data-color="Maroon Red" style="background:#B91C1C;" title="Maroon Red"></div>
+              <div class="color-swatch" data-color="Teal" style="background:#0D9488;" title="Teal"></div>
+            </div>
+            <!-- Hidden input to store selected color -->
+            <input type="hidden" id="preferred-colors" name="preferredColors" />
+          </div>
+
+          <div class="form-group">
+            <label for="logo-note">Logo / Branding</label>
+            <select id="logo-note" name="logoNote" class="form-control">
+              <option value="">Select option…</option>
+              <option value="I have a logo – I'll send it via WhatsApp/email">I have a logo – I'll send it via WhatsApp/email</option>
+              <option value="I don't have a logo – please create one">I don't have a logo – please create one</option>
+              <option value="Use my business name as a text logo">Use my business name as a text logo (wordmark)</option>
+            </select>
+            <p style="font-size:12px; color:var(--gray); margin-top:6px;">Logo files can be sent via WhatsApp or email after submitting this form.</p>
+          </div>
+
+          <div class="form-group">
+            <label for="website-ref">Website Style Reference (optional)</label>
+            <input type="url" id="website-ref" name="websiteRef" class="form-control" placeholder="Paste a link to a website you like the look of (e.g. https://example.com)" />
+          </div>
+
+          <!-- === SECTION 3: Hosting === -->
+          <div class="form-section-title">
+            <div class="step-dot">3</div> Hosting Options
+          </div>
+
+          <div class="form-group">
+            <label>Do you need hosting?</label>
+            <div class="radio-group">
+              <div class="radio-option">
+                <input type="radio" id="hosting-yes" name="needs-hosting" value="Yes, I need hosting" />
+                <label for="hosting-yes">Yes, please set up hosting</label>
+              </div>
+              <div class="radio-option">
+                <input type="radio" id="hosting-no" name="needs-hosting" value="No, I'll handle hosting myself" />
+                <label for="hosting-no">No, I'll handle it myself</label>
+              </div>
+              <div class="radio-option">
+                <input type="radio" id="hosting-unsure" name="needs-hosting" value="Not sure – advise me" />
+                <label for="hosting-unsure">Not sure – advise me</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Preferred Hosting Type</label>
+            <div class="radio-group">
+              <div class="radio-option">
+                <input type="radio" id="host-free" name="hosting-type" value="Free Hosting (subdomain)" />
+                <label for="host-free">🆓 Free Hosting</label>
+              </div>
+              <div class="radio-option">
+                <input type="radio" id="host-paid" name="hosting-type" value="Paid Hosting (custom domain)" />
+                <label for="host-paid">⭐ Paid Hosting (custom domain)</label>
+              </div>
+            </div>
+            <p style="font-size:12px; color:var(--gray); margin-top:8px;">See <a href="services.html#hosting" style="color:var(--accent);">services page</a> for hosting comparison and pricing.</p>
+          </div>
+
+          <!-- === SECTION 4: Contact Details === -->
+          <div class="form-section-title">
+            <div class="step-dot">4</div> Your Contact Details
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contact-email">Your Email *</label>
+              <input type="email" id="contact-email" name="contactEmail" class="form-control" placeholder="you@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="contact-phone">Phone / WhatsApp *</label>
+              <input type="tel" id="contact-phone" name="contactPhone" class="form-control" placeholder="+256 700 000 000" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="additional-notes">Additional Notes</label>
+            <textarea id="additional-notes" name="additionalNotes" class="form-control" placeholder="Anything else we should know? E.g. specific features, content you have ready, urgency, budget constraints…" rows="4"></textarea>
+          </div>
+
+          <!-- Budget field -->
+          <div class="form-group">
+            <label for="budget">Approximate Budget (optional)</label>
+            <select id="budget" name="budget" class="form-control">
+              <option value="">I'm not sure yet</option>
+              <option value="Under $80 / UGX 300K">Under $80 / Under UGX 300K</option>
+              <option value="$80–$150 / UGX 300K–500K">$80–$150 / UGX 300K–500K</option>
+              <option value="$150–$300 / UGX 500K–1M">$150–$300 / UGX 500K–1M</option>
+              <option value="$300+ / UGX 1M+">$300+ / UGX 1M+</option>
+              <option value="Flexible – show me options">Flexible – show me options</option>
+            </select>
+          </div>
+
+          <!-- Submit button -->
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; padding:18px; font-size:16px; margin-top:8px;">
+            Submit Website Request →
+          </button>
+
+          <p style="text-align:center; font-size:13px; color:var(--gray); margin-top:16px;">
+            After submitting, we'll contact you within 24 hours via email or WhatsApp to discuss your project.
+          </p>
+        </form>
+
+        <!-- Success Message -->
+        <div id="project-success" class="form-success" style="margin-top:24px;">
+          <h4>🎉 Request Submitted Successfully!</h4>
+          <p>Thank you! We've received your website project request. We'll reach out within 24 hours via email or WhatsApp to get started. Check your Project Summary on the right →</p>
+        </div>
+      </div>
+
+      <!-- ====================================================
+           SUMMARY SIDEBAR (right column)
+           ==================================================== -->
+      <div class="reveal-right">
+        <div class="summary-card">
+          <h3>📋 Project Summary</h3>
+          <div id="summary-content">
+            <div class="summary-empty">
+              <div class="empty-icon">📋</div>
+              <p>Fill in the form to see your project summary here.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick pricing reminder -->
+        <div style="background:var(--primary); border-radius:var(--radius); padding:28px; margin-top:24px; color:var(--white);">
+          <div style="font-family:var(--font-display); font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:rgba(255,255,255,0.5); margin-bottom:16px;">Quick Pricing Guide</div>
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:14px; color:rgba(255,255,255,0.8);">🌱 Starter</span>
+              <span style="font-family:var(--font-display); font-weight:700; color:var(--accent2);" class="price-starter">$80–$120</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:14px; color:rgba(255,255,255,0.8);">🏢 Business</span>
+              <span style="font-family:var(--font-display); font-weight:700; color:var(--accent2);" class="price-business">$150–$250</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:14px; color:rgba(255,255,255,0.8);">🛒 Online Store</span>
+              <span style="font-family:var(--font-display); font-weight:700; color:var(--accent2);" class="price-store">$300–$500</span>
+            </div>
+            <div style="height:1px; background:rgba(255,255,255,0.1); margin:4px 0;"></div>
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:14px; color:rgba(255,255,255,0.8);">⭐ Paid Hosting</span>
+              <span style="font-family:var(--font-display); font-weight:700; color:var(--accent2);" class="price-host-paid">$30–$60/yr</span>
+            </div>
+          </div>
+          <a href="services.html" style="display:block; text-align:center; margin-top:20px; font-family:var(--font-display); font-size:13px; font-weight:700; color:var(--accent); text-decoration:none;">View full pricing →</a>
+        </div>
+
+        <!-- WhatsApp quick contact -->
+        <div style="background:var(--white); border-radius:var(--radius); padding:28px; margin-top:24px; text-align:center; border:2px solid var(--light-gray);">
+          <div style="font-size:36px; margin-bottom:12px;">💬</div>
+          <h4 style="font-family:var(--font-display); margin-bottom:8px;">Prefer WhatsApp?</h4>
+          <p style="font-size:14px; color:var(--gray); margin-bottom:20px;">Chat directly with us for a faster response.</p>
+          <!-- Edit WhatsApp number here -->
+          <a href="https://wa.me/256700000000?text=Hi%20ANDYWEB%2C%20I%27d%20like%20to%20discuss%20my%20website%20project." target="_blank" class="btn btn-whatsapp" style="width:100%; justify-content:center; font-size:14px; padding:12px 20px;">
+            Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PAST SUBMISSIONS
+     ============================================================ -->
+<section class="section submissions-section">
+  <div class="container">
+    <div class="section-title-block reveal" style="margin-bottom:40px;">
+      <div class="tag">Your Submissions</div>
+      <h2 class="section-title">Past Project Requests</h2>
+      <p>Your submitted project requests are saved below. These are stored locally on this device.</p>
+    </div>
+
+    <div id="submissions-list">
+      <!-- Loaded by JavaScript from localStorage -->
+      <div class="no-submissions">
+        <div class="ns-icon">📭</div>
+        <h3>No submissions yet</h3>
+        <p>Submit your first website request using the form above.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">ANDY<span>WEB</span></div>
+        <p class="footer-desc">Affordable, professional websites for individuals and small businesses in Uganda and around the world.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link">📘</a>
+          <a href="#" class="social-link">📸</a>
+          <a href="#" class="social-link">🐦</a>
+          <a href="#" class="social-link">💬</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Starter Website</a></li>
+          <li><a href="services.html">Business Website</a></li>
+          <li><a href="services.html">Online Store</a></li>
+          <li><a href="services.html">Hosting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@andyweb.ug">📧 hello@andyweb.ug</a></li>
+          <li><a href="tel:+256700000000">📞 +256 700 000 000</a></li>
+          <li><a href="https://wa.me/256700000000">💬 WhatsApp</a></li>
+          <li><a href="contact.html">Send a message</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 ANDYWEB. All rights reserved.</span>
+      <span>Made with ❤️ in Uganda 🇺🇬</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
