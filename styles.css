@@ -257,7 +257,7 @@ p { font-size: 17px; color: var(--gray); line-height: 1.75; }
 }
 .hero {
   background-image: 
-    url("data:image/svg+xml,..."), /* hex — paste the url() above */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='69.28'%3E%3Cpolygon points='30,2 56,17 56,47 30,62 4,47 4,17' fill='none' stroke='%231a1a1a' stroke-width='0.8' opacity='0.045'/%3E%3Cpolygon points='60,36.6 86,51.6 86,81.6 60,96.6 34,81.6 34,51.6' fill='none' stroke='%231a1a1a' stroke-width='0.8' opacity='0.045'/%3E%3Cpolygon points='0,36.6 26,51.6 26,81.6 0,96.6 -26,81.6 -26,51.6' fill='none' stroke='%231a1a1a' stroke-width='0.8' opacity='0.045'/%3E%3C/svg%3E"), /* hex — paste the url() above */
     url("your-existing-grid.svg"); /* your current grid pattern second */
   background-repeat: repeat, repeat;
 }
